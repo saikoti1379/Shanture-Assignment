@@ -1,0 +1,31 @@
+{
+  "name": "sales-analytics-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/backend/server.js",
+    "client": "cd src/frontend && react-scripts start",
+    "dev": "concurrently \"nodemon src/backend/server.js\" \"cd src/frontend && react-scripts start\"",
+    "build": "cd src/frontend && react-scripts build && cp -r build ../backend/public",
+    "seed": "node src/backend/scripts/seed.js"
+  },
+  "proxy": "http://localhost:5000",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "concurrently": "^8.2.0",
+    "nodemon": "^2.0.22",
+    "axios": "^1.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "@mui/material": "^5.14.0",
+    "echarts": "^5.4.2",
+    "echarts-for-react": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
